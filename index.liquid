@@ -3,5 +3,13 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Click the button to generate a <strong>name</strong></h1>
+
+<div x-data="nameGenerator()">
+    <h1 x-text="randomName" style="font-size: 2rem; margin-bottom: 10px;">Your name will appear here</h1>
+    <button @click="generateName()" style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">Generate Name</button>
+</div>
+
+<!-- Include Alpine.js and custom script -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="/script.js"></script>
